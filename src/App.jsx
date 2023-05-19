@@ -13,7 +13,7 @@ console.log(datas);
   return (
     <div>
   {
-    datas.map(data=><Table key={data.matchId} striped bordered hover>
+    datas.map(data=><Table className='w-50 mx-auto mt-5' key={data.matchId} striped bordered hover>
     
       <tbody>
         <tr>
@@ -27,29 +27,34 @@ console.log(datas);
           <td> Team 2</td>
         </tr>
         <tr>
-          <td>1</td>
-          <td >Mark</td>
-          <td >Otto</td>
+          <td>Goals</td>
+          <td >{data?.stats?.teamA?.goals}</td>
+          <td >{data?.stats?.teamB?.goals}</td>
         </tr>
         <tr>
-          <td>1</td>
-          <td>Mark</td>
-          <td>Otto</td>
+          <td>Possession</td>
+          <td>{data?.stats?.teamA?.possession}</td>
+          <td>{data?.stats?.teamB?.possession}</td>
         </tr>
         <tr>
-          <td>1</td>
-          <td>Mark</td>
-          <td>Otto</td>
+          <td>Total Passes</td>
+          <td>{data?.stats?.teamA?.passes}</td>
+          <td>{data?.stats?.teamB?.passes}</td>
         </tr>
         <tr>
-          <td>1</td>
-          <td>Mark</td>
-          <td>Otto</td>
+          <td>Shots</td>
+          <td>{data?.stats?.teamA?.shots}</td>
+          <td>{data?.stats?.teamB?.shots}</td>
         </tr>
         <tr>
-          <td>1</td>
-          <td>Mark</td>
-          <td>Otto</td>
+          <td>Shots on target</td>
+          <td>{data?.stats?.teamA?.shotsOnTarget}</td>
+          <td>{data?.stats?.teamB?.shotsOnTarget}</td>
+        </tr>
+        <tr>
+          <td>Corners</td>
+          <td>{data?.stats?.teamA?.corners}</td>
+          <td>{data?.stats?.teamB?.corners}</td>
         </tr>
         
         
